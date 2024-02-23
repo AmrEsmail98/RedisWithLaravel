@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->date('subscription_end_data');
             $table->timestamps();
         });
     }
