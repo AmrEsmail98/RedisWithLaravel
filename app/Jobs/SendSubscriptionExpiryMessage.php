@@ -30,7 +30,9 @@ class SendSubscriptionExpiryMessage implements ShouldQueue {
      * @return void
      */
     public function handle() {
+
         info('now in job');
+        sendMail('emails.subscription', $this->customer->email, 'your subscription expire', $this->customer);
 
         //
     }
